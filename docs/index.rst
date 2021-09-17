@@ -1,5 +1,5 @@
-Welcome to Phase 1's documentation!
-==========================================
+Home
+====
 
 .. toctree::
    :maxdepth: 2

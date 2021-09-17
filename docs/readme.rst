@@ -8,13 +8,13 @@ ReadMe
 Environment
 ===========
 - Ubuntu 20.04 LTS
-- Python 3.8
+- Python 3.8.10
 
 Requirements
 ============
-- pytest (if you desire to run full test suite)
-- sphinx (if you desire to generate the documentation on your own machine)
-- groundwork-sphinx-theme (If you want pretty documentation instead of being a basic light theme normie)
+- pytest (if you want to run full test suite)
+- sphinx (if you want to regenerate the documentation on your own machine)
+- groundwork-sphinx-theme (If you want to regenerate pretty documentation instead of being a basic light theme normie)
 
 if you want to install all of these at once run
 
@@ -23,7 +23,7 @@ if you want to install all of these at once run
 .. code-block:: bash
 
    cd phase_1
-   pip3 install -r requirements.txt;
+   pip3 install -r requirements.txt
 
 Usage
 =====
@@ -46,4 +46,6 @@ Usage
    python3 scripts/udp_server.py &
    # Separate terminal, requires pytest
    pytest
+
+:ref:`Home`
 
