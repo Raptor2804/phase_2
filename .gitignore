@@ -2,4 +2,4 @@
 docs/_build/
 venv
 .pytest_cache
-submission
+html
