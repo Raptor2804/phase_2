@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
+
 """
-Requires you to run udp_server.py before running this test because at the moment I'm not dealing with threading
+Requires you to run udp_echo_server.py before running this test because at the moment I'm not dealing with threading
 """
 
 

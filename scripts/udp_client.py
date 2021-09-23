@@ -1,3 +1,5 @@
+#!/usr/bin/bash/python3
+
 from socket import *
 
 

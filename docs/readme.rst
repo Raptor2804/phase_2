@@ -1,9 +1,12 @@
 ReadMe
 ======
 :Phase:
-   Phase 1
+   Phase 2
 :Authors:
-   Patrick Hoey
+   Patrick Hoey,
+   Ryan McCann,
+   Divyaksh Wadhwa,
+   Parikshit Jadav
 
 Environment
 ===========
@@ -31,9 +34,9 @@ Usage
 
 .. code-block:: bash
 
-   cd phase_1
+   cd phase_2
    # Run server in background
-   python3 scripts/udp_server.py
+   python3 scripts/udp_echo_server.py
    # Separate terminal
    python3 scripts/udp_client.py
 
@@ -43,7 +46,7 @@ Usage
 
    cd phase_1
    # Run Server in background
-   python3 scripts/udp_server.py &
+   python3 scripts/udp_echo_server.py &
    # Separate terminal, requires pytest
    pytest
 

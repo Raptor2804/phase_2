@@ -1,7 +1,9 @@
+#!/usr/bin/bash/python3
+
 from socket import *
 
 
-class UdpServer:
+class UdpEchoServer:
     """
     A basic implementation of a UDP Server. Server class will simply echo any message received from clients
 
@@ -29,6 +31,6 @@ class UdpServer:
 
 
 if __name__ == "__main__":
-    server = UdpServer()
+    server = UdpEchoServer()
     print("Server Running and waiting for connections")
     server.run()
