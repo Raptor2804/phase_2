@@ -16,7 +16,7 @@ class ClientInstance:
         self.number_of_packets = -1
         self.data = []
         # === I believe the server doesn't account for the file name yet ===
-        self.filename = "DEFAULT_FILE.bmp"
+        self.filename = "DEFAULT_FILE.txt"
 
 
 class UdpFileTransferServer:

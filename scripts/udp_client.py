@@ -40,7 +40,7 @@ class UdpClient:
 
     def make_packets(self):
         """
-        Reads in a bmp image file and formats it for server communication
+        Reads in a file and formats it for server communication
 
         :return: A matrix of byte arrays
         """
