@@ -5,4 +5,4 @@ venv
 html
 *__pycache__/
 *.swap
-DEFAULT_FILE.txt
+DEFAULT_FILE.*

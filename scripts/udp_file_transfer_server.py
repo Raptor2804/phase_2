@@ -15,6 +15,7 @@ class ClientInstance:
         self.port_number = port_number
         self.number_of_packets = -1
         self.data = []
+        # === I believe the server doesn't account for the file name yet ===
         self.filename = "DEFAULT_FILE.txt"
 
 
@@ -84,7 +85,10 @@ class UdpFileTransferServer:
         else:
             print("{}:{} has connected for the first time".format(client.ip_address, client.port_number))
             # First connection we assume the packet only contains the number of packets with no data :(
-            client.number_of_packets = int(message.decode())
+
+            # client.number_of_packets = int(message.decode())
+            # === To decode the byte array (Old code above) ===
+            client.number_of_packets = int.from_bytes(message, 'little')
             print("{}:{} will send {} packets".format(client.ip_address, client.port_number, client.number_of_packets))
             self.client_list.append(client)
             self.most_recent_client = self.client_list[-1]
