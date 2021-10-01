@@ -3,8 +3,6 @@
 from socket import *
 import io
 import os
-# from PIL import ImageTk
-import PIL.Image
 import PySimpleGUI as sg
 from tkinter import *
 
@@ -114,32 +112,32 @@ class UdpFileTransferServer:
             self.most_recent_client = self.client_list[-1]
             # clear the data field where the packets were stored initially
         self.data.clear()
-        #############################################
-        layout = [
-            [sg.Image(key="-IMAGE-")],
-            [
-                sg.Text("Image File"),
-                sg.Input(size=(25, 1), key="-FILE-"),
-                sg.FileBrowse(file_types="*.bmp"),
-                sg.Button("Load Image"),
-            ],
-        ]
-        window = sg.Window("Image Viewer", layout)
-        while True:
-            event, values = window.read()
-            if event == "Exit" or event == sg.WIN_CLOSED:
-                break
-            if event == "Load Image":
-                filename = values["-FILE-"]
-                if os.path.exists(filename):
-                    image = Image.open(values["-FILE-"])
-                    image.thumbnail((400, 400))
-                    bio = io.BytesIO()
-                    image.save(bio, format="PNG")
-                    window["-IMAGE-"].update(data=bio.getvalue())
-        window.close()
-
-    ################################################
+    #     #############################################
+    #     layout = [
+    #         [sg.Image(key="-IMAGE-")],
+    #         [
+    #             sg.Text("Image File"),
+    #             sg.Input(size=(25, 1), key="-FILE-"),
+    #             sg.FileBrowse(file_types="*.bmp"),
+    #             sg.Button("Load Image"),
+    #         ],
+    #     ]
+    #     window = sg.Window("Image Viewer", layout)
+    #     while True:
+    #         event, values = window.read()
+    #         if event == "Exit" or event == sg.WIN_CLOSED:
+    #             break
+    #         if event == "Load Image":
+    #             filename = values["-FILE-"]
+    #             if os.path.exists(filename):
+    #                 image = Image.open(values["-FILE-"])
+    #                 image.thumbnail((400, 400))
+    #                 bio = io.BytesIO()
+    #                 image.save(bio, format="PNG")
+    #                 window["-IMAGE-"].update(data=bio.getvalue())
+    #     window.close()
+    #
+    # ################################################
 
 if __name__ == "__main__":
     server = UdpFileTransferServer()
