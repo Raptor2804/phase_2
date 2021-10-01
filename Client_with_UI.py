@@ -95,10 +95,6 @@ def send():
     window.close()
 
 
-    client = UdpClient()
-    client.make_pkt()
-    client.rdt_send()
-
 
 if __name__ == "__main__":
     client = UdpClient()
